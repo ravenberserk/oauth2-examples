@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  oauthdb:
+    image: mariadb
+    volumes:
+      - oauthdb:/var/lib/mysql
+      - .\config\oauthdb.sql:/docker-entrypoint-initdb.d/oauthdb.sql
+    ports:
+      - "4000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: oauthdb
+
+  oauth2_server:
+    image: oauth2-jpa
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oauthdb
+
+volumes:
+  oauthdb:
