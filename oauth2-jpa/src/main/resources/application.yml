@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: jpa
+  datasource:
+    url: jdbc:mysql://oauthdb:3306/oauthdb
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+management:
+  context_path: /admin
+
+server:
+  servlet:
+    context-path: /auth
+
+security:
+  user:
+    password: password
