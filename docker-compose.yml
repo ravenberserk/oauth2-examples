@@ -18,5 +18,12 @@ services:
     depends_on:
       - oauthdb
 
+  oauth2_client:
+    image: oauth2-client
+    ports:
+      - "8081:8081"
+    depends_on:
+      - oauth2_server
+
 volumes:
   oauthdb:
