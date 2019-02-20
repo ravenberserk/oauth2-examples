@@ -50,6 +50,7 @@
 
     <modules>
         <module>oauth2-jpa</module>
+        <module>client</module>
     </modules>
 
 </project>

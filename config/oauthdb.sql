@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS oauth_client_details(
   access_token_validity INTEGER DEFAULT 36000,
   refresh_token_validity INTEGER DEFAULT 36000,
   additional_information VARCHAR(4096),
-  autoapprove BIT(1)
+  autoapprove VARCHAR(256)
 );
 
 CREATE TABLE IF NOT EXISTS oauth_client_token(
@@ -89,9 +89,9 @@ VALUES ("my-trusted-client",
         "$2a$10$m7BHcqyuOPyt8oVSrtY.xubF7xo5C1d7CDYABQSOZsrrICAWrWaYa",
         "root,server",
         "client_credentials,password,authorization_code,implicit",
-        "http://localhost:8080/",
+        "http://localhost:8081/login",
         "ROLE_TRUSTED_CLIENT",
-        true);
+        "server");
 
 -- Users
 -- Passwords:
