@@ -89,7 +89,7 @@ VALUES ("my-trusted-client",
         "$2a$10$m7BHcqyuOPyt8oVSrtY.xubF7xo5C1d7CDYABQSOZsrrICAWrWaYa",
         "root,server",
         "client_credentials,password,authorization_code,implicit",
-        "http://localhost:8080/",
+        "http://localhost:8081/login",
         "ROLE_TRUSTED_CLIENT",
         true);
 

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: client
+
+security:
+  oauth2:
+    client:
+      clientId: my-trusted-client
+      clientSecret: 1234
+      grant-type: authorization_code
+      scope: server
+      accessTokenUri: http://localhost:8080/auth/oauth/token
+      userAuthorizationUri: http://localhost:8080/auth/oauth/authorize
+    resource:
+      user-info-uri: http://localhost:8080/auth/users/current
+
+server:
+  port: 8081
